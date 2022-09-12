@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sarala:wght@400;700&family=Silkscreen:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+body {
+    background-color: #884ab2;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.board {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+/*Cell */
+.square {
+    height: 100px;
+    width: 100px;
+    border: 3px solid #a5e6ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.square.X .square.circle {
+    cursor: not-allowed;
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+    border-top: none;
+}
+
+.square:nth-child(1),
+.square:nth-child(4),
+.square:nth-child(7) {
+    border-left: none;
+}
+
+.square:nth-child(3),
+.square:nth-child(6),
+.square:nth-child(9) {
+    border-right: none;
+}
+
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+    border-bottom: none;
+}
+
+/*X*/
+
+.square.X::before,
+.square.X::after,
+.board.X .square:not(.X):not(.circle):hover::after,
+.board.X .square:not(.X):not(.circle):hover::before{
+    content: "";
+    height: calc(100px * 0.15);
+    width: calc(100px * 0.9);
+    background: #a5e6ba;
+    position: absolute;
+}
+
+.square.X::before,
+.board.X .square:not(.X):not(.circle):hover::before{
+    transform: rotate(45deg);
+}
+
+.square.X::after,
+.board.X .square:not(.X):not(.circle):hover::after{
+    transform: rotate(-45deg);
+}
+
+/*Circle*/
+
+.square.circle::before,
+.board.circle .square:not(.X):not(.circle):hover::before {
+    content: "";
+    height: calc(100px * 0.9);
+    width: calc(100px * 0.9);
+    background: #a5e6ba;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.result-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #a5e6ba;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+button {
+    cursor: pointer;
+    background-color: #5b2a86;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 1rem;
+    color: #a5e6ba;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #3d1c5a;
+}
+
+.show-result {
+    display: flex;
+}
+
+
+
+    
