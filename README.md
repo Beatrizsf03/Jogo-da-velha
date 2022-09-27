@@ -13,7 +13,6 @@ Hello. I did this project following the teachings of Felipe Rocha on youtube. Vi
 <img src="https://user-images.githubusercontent.com/105602909/189670492-c3690864-2773-4bfd-a331-44b78eaec51d.png" width="700px" />
 </div>
 </br>
-<p align="center">A tie:</p>
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/105602909/190272621-6e3da41d-773c-42ab-a8b9-55642cd242f1.png" width="700px" />
